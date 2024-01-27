@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>about website</title>
+</head>
+<body>
+    
+{% extends 'base.html'%}
+
+{% block content %}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" 
+integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" 
+crossorigin="anonymous" referrerpolicy="no-referrer" /><body bgcolor="skyblue">
+ 
+ <H1 align="center">
+        <FONT COLOR="">Some Table name</FONT>
+ </H1>
+ 
+<table border="1" cellspacing="1" align="center">
+ 
+<tr bgcolor="#5555ff">
+  <td align="center">ID <i class="fa-solid fa-up-right-and-down-left-from-center"></i>
+  <td align="center">Full Name <i class="fa-solid fa-up-right-and-down-left-from-center"></i>
+  <td align="center">Email <i class="fa-solid fa-up-right-and-down-left-from-center"></i>
+  <td align="center">Investments <i class="fa-solid fa-up-right-and-down-left-from-center"></i>
+  <td align="center">Actions <i class="fa-solid fa-up-right-and-down-left-from-center"></i>
+
+</tr>
+ 
+{%for id, value in context.items%}
+<tr bgcolor="">
+    <td align="center" bgcolor="">{{id}}
+        {% for info in value%}
+        <td align="center"> {{info}}
+        {%endfor%}
+        <i class="fa-solid fa-calendar-plus"></i>
+        <i class="fa-solid fa-calendar-xmark"></i>
+</tr>
+{%endfor%}
+</body>
+</html>
+{% endblock content %}
+
+</body>
+</html>

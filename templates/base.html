@@ -1,9 +1,11 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>base.html</title>
+    <title>base</title>
 </head>
 <body>
 
@@ -19,29 +21,27 @@
 
 <!-- Menu panel uchun table -->
 <table border="0" cellspacing="10" align="center">
-    <tr bgcolor="white">
+    <tr bgcolor="">
         <td align="center">
-        
-        <header> 
-            <b>
-            <a href= "{% url 'home' %}" > Home Page </a>
+            <link rel="stylesheet" href="{% static 'css/base.css' %}">
+            <header><h3><a href= "{% url 'home' %}" > Home Page </a></h3></header>
+        </td>
+        <td>
+            <header><h3><a href="{% url 'about' %}" > More about site </a></h3></header>
+        </td>
+        <td>
+            <header><h3><a href="{% url 'news' %}" > News </a></h3></header>
         </td>
 
         <td>
-            <b>
-            <a href="{% url 'about' %}" > More about site </a>
+            <header><h3><a href="{% url 'images' %}" > Images </a></h3></header>
         </td>
-
         <td>
-            <b>
-            <a href="{% url 'news' %}" > News </a>
+            <header><h3><a href="{% url 'postdetail' %}" > Blog Post </a></h3></header>
         </td>
-
         <td>
-            <b>
-            <a href="{% url 'images' %}" > Images </a>
+            <header><h3><a href="{% url 'table' %}" > Uy vazifa table </a></h3></header>
         </td>
-        </header>
     </tr>
 </table>
 
