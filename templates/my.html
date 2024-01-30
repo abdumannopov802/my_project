@@ -1,0 +1,110 @@
+
+@FruitForge
+7 месяцев назад
+code in case you need: <!DOCTYPE html>
+<html>
+<head>
+  <style>
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    overflow: hidden;
+}
+.container {
+    font-size: 10px;
+    width: 40em;
+    height: 40em;
+    position: relative;
+}
+.sun {
+    position: center;
+    top: auto;
+    width: 8em;
+    height: 8em;
+    background-color: yellow;
+    border-radius: 50%;
+    box-shadow: 0 0 100em white;
+}
+.earth,.moon,.mars {
+    position:absolute;
+    border-style: solid;
+    border-color: white transparent;
+    border-width: 0.1em 0.1em 0 0;
+    border-radius: 50%;
+}
+.earth {
+    top: -28%;
+    left: -27%;
+    position: center ;
+    width: 30em;
+    height: 30em; 
+    animation: orbit 36.6s linear infinite;   
+}
+.moon {
+    top: 0;
+    right: 0;
+    width: 8em;
+    height: 8em; 
+    animation: orbit 2.7s linear infinite;
+}
+.mars {
+    top: -65%;
+    left: -60%;
+    position: center ;
+    width: 60em;
+    height: 60em; 
+    animation: orbit 100s linear infinite;   
+}
+
+.earth::before,
+.moon::before,
+.mars::before {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+}
+.earth::before {
+    top: 2.8em;
+    right: 2.8em;
+    width: 3em;
+    height: 3em;
+    background-color: skyblue;    
+}
+.moon::before {
+    top: 1em;
+    right: 0.2em;
+    width: 1.2em;
+    height: 1.2em;
+    background-color: silver;
+}
+.mars::before {
+    top: 7.9em;
+    right: 5em;
+    width: 5em;
+    height: 5em;
+    background-color: brown;
+}
+
+
+@keyframes orbit {
+    to {
+        transform: rotate(360deg);
+    }
+}
+  </style>
+</head>
+<body>
+    <div class="container">
+        <div class="sun"></div>
+        <div class="mars"></div>
+        <div class="yupiter"></div>
+        <div class="earth">
+        <div class="moon"></div>
+        </div>
+        </div>
+      </div>
+</body>

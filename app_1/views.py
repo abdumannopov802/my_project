@@ -22,7 +22,10 @@ class Admin(TemplateView):
     template_name = 'admin.html'
 
 class PostDetaliView(TemplateView):
-     template_name = 'postdetail.html'
+     template_name = 'postdetails.html'
+
+class NewTableView(TemplateView):
+     template_name = 'index.html'
 
 
 
@@ -45,3 +48,15 @@ def HomeworkTable(request):
 
 # def mssview(request):
 #     return render(request=request, template_name='detail.html', context={})
+
+def test(request):
+    test = 'some text'
+    return render(request=request, template_name='test.html', context={'test':test})
+
+
+def test2(request):
+    dictionary = {'4 gacha': [1, 2, 3],
+                   '7 gacha': [4, 5, 6],
+                   '10 gacha': [7, 8, 9]}
+    return render(request=request, template_name='test.html', context={'dict':dictionary})
+

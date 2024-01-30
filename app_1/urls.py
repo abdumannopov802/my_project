@@ -8,5 +8,7 @@ urlpatterns = [
     path('images/', imagesPageView.as_view(), name='images'),
     path('admin/', Admin.as_view(), name='admin'),
     path('table/', HomeworkTable, name='table'),
-    path('post/', PostDetaliView.as_view(), name='postdetail'),
+    path('post/', PostDetaliView.as_view(), name='postdetails'),
+    path('new/table/', NewTableView.as_view(), name='index'),
+    path('test/', test2, name='test')
 ]

@@ -23,7 +23,7 @@
 <table border="0" cellspacing="10" align="center">
     <tr bgcolor="">
         <td align="center">
-            <link rel="stylesheet" href="{% static 'css/base.css' %}">
+            <!-- <link rel="stylesheet" href="{% static 'css/base.css' %}"> -->
             <header><h3><a href= "{% url 'home' %}" > Home Page </a></h3></header>
         </td>
         <td>
@@ -37,16 +37,21 @@
             <header><h3><a href="{% url 'images' %}" > Images </a></h3></header>
         </td>
         <td>
-            <header><h3><a href="{% url 'postdetail' %}" > Blog Post </a></h3></header>
+            <header><h3><a href="{% url 'postdetails' %}" > Blog Post </a></h3></header>
         </td>
         <td>
             <header><h3><a href="{% url 'table' %}" > Uy vazifa table </a></h3></header>
         </td>
+        <td>
+            <header><h3><a href="{% url 'index' %}" > New Table </a></h3></header>
+        </td>
     </tr>
 </table>
 
+
 {% block content %}
 {% endblock content%}
+
 
 </body>
 </html>
